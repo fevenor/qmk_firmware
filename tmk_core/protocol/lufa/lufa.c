@@ -1039,6 +1039,8 @@ int main(void)
     serial_init();
 #endif
 
+    keyboard_init();
+
     /* wait for USB startup & debug output */
 
 #ifdef WAIT_FOR_USB
@@ -1048,13 +1050,13 @@ int main(void)
     #else
             USB_USBTask();
     #endif
+            matrix_scan();
     }
     print("USB configured.\n");
 #else
     USB_USBTask();
 #endif
     /* init modules */
-    keyboard_init();
     host_set_driver(&lufa_driver);
 #ifdef SLEEP_LED_ENABLE
     sleep_led_init();
