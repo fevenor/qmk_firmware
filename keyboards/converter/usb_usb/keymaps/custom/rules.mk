@@ -3,11 +3,12 @@
 #
 #BOOTMAGIC_ENABLE = yes  # Virtual DIP switch configuration(+1000)
 MOUSEKEY_ENABLE  = yes  # Mouse keys(+4700)
-EXTRAKEY_ENABLE  = yes  # Audio control and System control(+450)
+EXTRAKEY_ENABLE  = no  # Audio control and System control(+450)
 #CONSOLE_ENABLE   = yes  # Console for debug(+400)
 #COMMAND_ENABLE   = yes  # Commands for debug and configuration
 SLEEP_LED_ENABLE = yes  # Breathing sleep LED during USB suspend
 #NKRO_ENABLE      = yes  # USB Nkey Rollover - not yet supported in LUFA
 #BACKLIGHT_ENABLE = yes
+WAIT_FOR_USB = yes
 #KEYBOARD_SHARED_EP = yes
 #MOUSE_SHARED_EP = no
